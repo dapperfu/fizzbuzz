@@ -81,6 +81,7 @@ GITHUB_PAGES_DIR = docs
 .PHONY: doorstop-html
 doorstop-html:
 	mkdir -p ${DOORSTOP_HTML_DIR}
+	rm -rf ${DOORSTOP_HTML_DIR}/*
 	doorstop publish all ${DOORSTOP_HTML_DIR} --html
 
 # StrictDoc HTML generation
@@ -94,6 +95,17 @@ strictdoc-html:
 		cp -r ${STRICTDOC_TEMP_DIR}/html/* ${STRICTDOC_HTML_DIR}/; \
 		rm -rf ${STRICTDOC_TEMP_DIR}; \
 		python3 fix_strictdoc_paths.py; \
+	fi
+
+# Fix StrictDoc paths (converts absolute paths to relative paths)
+.PHONY: fix-strictdoc-paths
+fix-strictdoc-paths:
+	@if [ -d "${STRICTDOC_HTML_DIR}" ]; then \
+		python3 fix_strictdoc_paths.py; \
+	else \
+		echo "Error: StrictDoc HTML directory not found at ${STRICTDOC_HTML_DIR}"; \
+		echo "Run 'make strictdoc-html' first to generate the HTML files."; \
+		exit 1; \
 	fi
 
 # Generate all requirements documentation for GitHub Pages
