@@ -59,19 +59,19 @@ jobs:
           git add docs/doorstop/ docs/strictdoc/
           git commit -m "Auto-generate HTML documentation
 
-- Regenerated Doorstop HTML documentation
-- Regenerated StrictDoc HTML documentation
-- Updated path references for GitHub Pages compatibility
+          - Regenerated Doorstop HTML documentation
+          - Regenerated StrictDoc HTML documentation
+          - Updated path references for GitHub Pages compatibility
 
------
+          -----
 
-Prompt: Add a github action to generate the HTML and commit it server side.
-Context: Automated HTML documentation generation workflow that runs on every push to generate and commit documentation files
-Technical details:
-- Model: Auto (Cursor AI)
-- IDE: Cursor
-- Generation method: AI-assisted pair programming
-- Code style: GitHub Actions YAML workflow
-- Dependencies: strictdoc, doorstop, Python 3.12"
+          Prompt: Add a github action to generate the HTML and commit it server side.
+          Context: Automated HTML documentation generation workflow that runs on every push to generate and commit documentation files
+          Technical details:
+          - Model: Auto (Cursor AI)
+          - IDE: Cursor
+          - Generation method: AI-assisted pair programming
+          - Code style: GitHub Actions YAML workflow
+          - Dependencies: strictdoc, doorstop, Python 3.12"
           git push
 
