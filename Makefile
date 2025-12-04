@@ -104,6 +104,7 @@ reqs-html: doorstop-html strictdoc-html
 	@echo "  StrictDoc: ${STRICTDOC_HTML_DIR}/"
 
 # Serve requirements documentation with Python HTTP server
+# Added in commit 3813e37: https://github.com/dapperfu/fizzbuzz/commit/3813e37
 .PHONY: reqs-serv
 reqs-serv: reqs-html
 	@echo "Serving requirements documentation at http://localhost:8000"
