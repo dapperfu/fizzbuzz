@@ -1,0 +1,71 @@
+name: Generate HTML Documentation
+
+on:
+  push:
+    branches:
+      - '**'  # Trigger on push to any branch
+
+permissions:
+  contents: write  # Required to commit and push changes
+
+jobs:
+  generate-html:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+          fetch-depth: 0  # Fetch full history for proper git operations
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install strictdoc doorstop
+
+      - name: Generate HTML documentation
+        run: |
+          make reqs-html
+
+      - name: Configure git
+        run: |
+          git config user.name "${{ github.actor }} | Cursor.sh | GitHub Actions"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet docs/doorstop docs/strictdoc; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git add docs/doorstop/ docs/strictdoc/
+          git commit -m "Auto-generate HTML documentation
+
+- Regenerated Doorstop HTML documentation
+- Regenerated StrictDoc HTML documentation
+- Updated path references for GitHub Pages compatibility
+
+-----
+
+Prompt: Add a github action to generate the HTML and commit it server side.
+Context: Automated HTML documentation generation workflow that runs on every push to generate and commit documentation files
+Technical details:
+- Model: Auto (Cursor AI)
+- IDE: Cursor
+- Generation method: AI-assisted pair programming
+- Code style: GitHub Actions YAML workflow
+- Dependencies: strictdoc, doorstop, Python 3.12"
+          git push
+
