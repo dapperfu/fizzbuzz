@@ -103,6 +103,13 @@ reqs-html: doorstop-html strictdoc-html
 	@echo "  Doorstop: ${DOORSTOP_HTML_DIR}/"
 	@echo "  StrictDoc: ${STRICTDOC_HTML_DIR}/"
 
+# Serve requirements documentation with Python HTTP server
+.PHONY: reqs-serv
+reqs-serv: reqs-html
+	@echo "Serving requirements documentation at http://localhost:8000"
+	@echo "Press Ctrl+C to stop the server"
+	cd ${GITHUB_PAGES_DIR} && python3 -m http.server 8000
+
 # Clean target
 .PHONY: clean
 clean:
