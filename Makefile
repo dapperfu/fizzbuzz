@@ -117,3 +117,41 @@ reqs-serv: reqs-html
 clean:
 	rm -f ${C_EXE} ${CPP_EXE} ${RUST_EXE} ${GO_EXE}
 	rm -rf ${DOORSTOP_HTML_DIR} ${STRICTDOC_HTML_DIR} ${STRICTDOC_TEMP_DIR} docs/strictdoc/html
+
+# Docker configuration
+DOCKER_IMAGE = fizzbuzz:build
+DOCKER_CONTAINER = fizzbuzz-build
+DOCKER_OUTPUT = output_docker.txt
+
+# Docker build target
+.PHONY: docker-build
+docker-build:
+	docker build -t ${DOCKER_IMAGE} .
+
+# Docker run target - executes container and extracts output
+.PHONY: docker-run
+docker-run: docker-build
+	docker run --name ${DOCKER_CONTAINER} ${DOCKER_IMAGE} > ${DOCKER_OUTPUT} 2>&1 || true
+	docker cp ${DOCKER_CONTAINER}:/app/output_docker.txt ${DOCKER_OUTPUT} 2>/dev/null || true
+	docker rm ${DOCKER_CONTAINER} 2>/dev/null || true
+	@if [ -f ${DOCKER_OUTPUT} ]; then \
+		echo "Docker validation output saved to ${DOCKER_OUTPUT}"; \
+		cat ${DOCKER_OUTPUT}; \
+	else \
+		echo "Warning: ${DOCKER_OUTPUT} not found"; \
+	fi
+
+# Docker all target - build, run, and display results
+.PHONY: docker-all
+docker-all: docker-run
+
+# Docker test target - alias for docker-all
+.PHONY: docker-test
+docker-test: docker-all
+
+# Docker clean target - remove image, containers, and output
+.PHONY: docker-clean
+docker-clean:
+	docker rmi ${DOCKER_IMAGE} 2>/dev/null || true
+	docker rm ${DOCKER_CONTAINER} 2>/dev/null || true
+	rm -f ${DOCKER_OUTPUT}
