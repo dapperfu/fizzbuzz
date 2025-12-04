@@ -93,6 +93,7 @@ strictdoc-html:
 		rm -rf ${STRICTDOC_HTML_DIR}/*; \
 		cp -r ${STRICTDOC_TEMP_DIR}/html/* ${STRICTDOC_HTML_DIR}/; \
 		rm -rf ${STRICTDOC_TEMP_DIR}; \
+		python3 fix_strictdoc_paths.py; \
 	fi
 
 # Generate all requirements documentation for GitHub Pages
