@@ -2,7 +2,7 @@ active: true
 derived: false
 header: ''
 body: |
-  The system shall print numbers from 1 to 100 sequentially.
+  Print numbers from 1 to 100.
 footer: ''
 level: 1
 normative: true
@@ -10,6 +10,12 @@ parent: null
 ref: REQ-001
 reviewed: false
 text: |
-  The system shall print numbers from 1 to 100 sequentially.
+  Print numbers from 1 to 100.
 title: Print numbers from 1 to 100
+links:
+  - fizzbuzz.c
+  - fizzbuzz.cpp
+  - fizzbuzz.go
+  - fizzbuzz.py
+  - fizzbuzz.rs
 

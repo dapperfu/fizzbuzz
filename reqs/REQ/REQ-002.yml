@@ -2,7 +2,7 @@ active: true
 derived: false
 header: ''
 body: |
-  For numbers divisible by three, the system shall print "Fizz" instead of the number.
+  For numbers divisible by three, print "Fizz".
 footer: ''
 level: 1
 normative: true
@@ -10,6 +10,12 @@ parent: null
 ref: REQ-002
 reviewed: false
 text: |
-  For numbers divisible by three, the system shall print "Fizz" instead of the number.
+  For numbers divisible by three, print "Fizz".
 title: Print Fizz for numbers divisible by three
+links:
+  - fizzbuzz.c
+  - fizzbuzz.cpp
+  - fizzbuzz.go
+  - fizzbuzz.py
+  - fizzbuzz.rs
 

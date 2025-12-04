@@ -2,7 +2,7 @@ active: true
 derived: false
 header: ''
 body: |
-  For numbers divisible by five, the system shall print "Buzz" instead of the number.
+  For numbers divisible by five, print "Buzz".
 footer: ''
 level: 1
 normative: true
@@ -10,6 +10,12 @@ parent: null
 ref: REQ-003
 reviewed: false
 text: |
-  For numbers divisible by five, the system shall print "Buzz" instead of the number.
+  For numbers divisible by five, print "Buzz".
 title: Print Buzz for numbers divisible by five
+links:
+  - fizzbuzz.c
+  - fizzbuzz.cpp
+  - fizzbuzz.go
+  - fizzbuzz.py
+  - fizzbuzz.rs
 
