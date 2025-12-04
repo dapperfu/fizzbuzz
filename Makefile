@@ -79,7 +79,7 @@ STRICTDOC_HTML_DIR = docs/strictdoc/html
 .PHONY: doorstop-html
 doorstop-html:
 	mkdir -p ${DOORSTOP_HTML_DIR}
-	doorstop publish ${DOORSTOP_HTML_DIR}
+	doorstop publish all ${DOORSTOP_HTML_DIR} --html
 
 # StrictDoc HTML generation
 .PHONY: strictdoc-html

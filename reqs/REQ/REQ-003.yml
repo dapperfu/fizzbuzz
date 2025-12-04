@@ -4,7 +4,7 @@ header: ''
 body: |
   For numbers divisible by five, the system shall print "Buzz" instead of the number.
 footer: ''
-level: REQ
+level: 1
 normative: true
 parent: null
 ref: REQ-003
