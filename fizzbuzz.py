@@ -2,7 +2,7 @@
 
 #print("Hello World")
 
-for i in range(0,100):
+for i in range(1,101):
 	#print(i+1)
 	if i%3:
 		print(f"{i}: Fizz")
