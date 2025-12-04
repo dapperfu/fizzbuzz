@@ -12,3 +12,9 @@ Unknowns:
 Language.
 Speed vs Readibilty.
 One Liners?
+
+## Useage
+
+Do development:
+
+```make dev``` 
