@@ -71,9 +71,11 @@ all:
 dev:
 	nano fizzbuzz.py && ./fizzbuzz.py > output.txt && cat output.txt && git add . && read -p "Press Enter to continue..." dummy && git commit -a
 
-# Requirements documentation directories
+# Requirements documentation directories (GitHub Pages ready)
 DOORSTOP_HTML_DIR = docs/doorstop
-STRICTDOC_HTML_DIR = docs/strictdoc/html
+STRICTDOC_TEMP_DIR = docs/strictdoc-temp
+STRICTDOC_HTML_DIR = docs/strictdoc
+GITHUB_PAGES_DIR = docs
 
 # Doorstop HTML generation
 .PHONY: doorstop-html
@@ -84,18 +86,25 @@ doorstop-html:
 # StrictDoc HTML generation
 .PHONY: strictdoc-html
 strictdoc-html:
-	mkdir -p ${STRICTDOC_HTML_DIR}
-	strictdoc export --formats html --output-dir ${STRICTDOC_HTML_DIR} docs/strictdoc
+	mkdir -p ${STRICTDOC_TEMP_DIR}
+	strictdoc export --formats html --output-dir ${STRICTDOC_TEMP_DIR} docs/strictdoc
+	@if [ -d "${STRICTDOC_TEMP_DIR}/html" ]; then \
+		mkdir -p ${STRICTDOC_HTML_DIR}; \
+		rm -rf ${STRICTDOC_HTML_DIR}/*; \
+		cp -r ${STRICTDOC_TEMP_DIR}/html/* ${STRICTDOC_HTML_DIR}/; \
+		rm -rf ${STRICTDOC_TEMP_DIR}; \
+	fi
 
-# Generate all requirements documentation
+# Generate all requirements documentation for GitHub Pages
 .PHONY: reqs-html
 reqs-html: doorstop-html strictdoc-html
-	@echo "Requirements documentation generated:"
-	@echo "  Doorstop: ${DOORSTOP_HTML_DIR}"
-	@echo "  StrictDoc: ${STRICTDOC_HTML_DIR}"
+	@echo "Requirements documentation generated for GitHub Pages:"
+	@echo "  Main index: ${GITHUB_PAGES_DIR}/index.html"
+	@echo "  Doorstop: ${DOORSTOP_HTML_DIR}/"
+	@echo "  StrictDoc: ${STRICTDOC_HTML_DIR}/"
 
 # Clean target
 .PHONY: clean
 clean:
 	rm -f ${C_EXE} ${CPP_EXE} ${RUST_EXE} ${GO_EXE}
-	rm -rf ${DOORSTOP_HTML_DIR} ${STRICTDOC_HTML_DIR}
+	rm -rf ${DOORSTOP_HTML_DIR} ${STRICTDOC_HTML_DIR} ${STRICTDOC_TEMP_DIR} docs/strictdoc/html
