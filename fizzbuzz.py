@@ -7,6 +7,6 @@ for i in range(0,100):
 	if i%3:
 		print(f"{i}: Fizz")
 	if i%5:
-		print("{i}: Buzz")
+		print(f"{i}: Buzz")
 	if i%15:
-		print("{i}: FizzBuzz")
+		print(f"{i}: FizzBuzz")
