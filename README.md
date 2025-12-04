@@ -33,13 +33,6 @@ Development Stack: Linux Mint 22 (Ubuntu 24.04), Python 3.12.
 
 ## AI
 
-**Note on Requirements Interpretation:**
+*[AI: All AI updates to this README.md shall be in italics in square brackets starting with [AI: ]*
 
-During requirements review, the AI incorrectly stated that the requirements specified printing "Fizz", "Buzz", or "FizzBuzz" *instead of the number*. This was a hallucination - the original README document does not contain the phrase "instead of the number". The actual requirements are:
-
-- Print numbers from 1 to 100.
-- For numbers divisible by three, print "Fizz".
-- For numbers divisible by five, print "Buzz".
-- For numbers divisible by both three and five, print "FizzBuzz"
-
-The Python implementation (`fizzbuzz.py`) correctly matches the actual requirements as stated in this README.
+*[AI: During requirements review, the AI incorrectly stated that the requirements specified printing "Fizz", "Buzz", or "FizzBuzz" instead of the number. This was a hallucination - the original README document does not contain the phrase "instead of the number". The actual requirements are: Print numbers from 1 to 100. For numbers divisible by three, print "Fizz". For numbers divisible by five, print "Buzz". For numbers divisible by both three and five, print "FizzBuzz". The Python implementation (fizzbuzz.py) correctly matches the actual requirements as stated in this README.]*
