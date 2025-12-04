@@ -5,8 +5,8 @@
 for i in range(0,100):
 	#print(i+1)
 	if i%3:
-		print("3")
+		print(f"{i}: Fizz")
 	if i%5:
-		print("5")
+		print("{i}: Buzz")
 	if i%15:
-		print("15")
+		print("{i}: FizzBuzz")
