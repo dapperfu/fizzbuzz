@@ -41,11 +41,17 @@ jobs:
       - name: Check for changes
         id: check-changes
         run: |
-          if git diff --quiet docs/doorstop docs/strictdoc; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
+          # Check for changes in tracked files
+          if ! git diff --quiet docs/doorstop docs/strictdoc 2>/dev/null; then
             echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
           fi
+          # Check for untracked files
+          if [ -n "$(git ls-files --others --exclude-standard docs/doorstop docs/strictdoc)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          echo "changed=false" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
         if: steps.check-changes.outputs.changed == 'true'
