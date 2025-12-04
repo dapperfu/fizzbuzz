@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+body: |
+  For numbers divisible by both three and five, the system shall print "FizzBuzz" instead of the number.
+footer: ''
+level: REQ
+normative: true
+parent: null
+ref: REQ-004
+reviewed: false
+text: |
+  For numbers divisible by both three and five, the system shall print "FizzBuzz" instead of the number.
+title: Print FizzBuzz for numbers divisible by both three and five
+

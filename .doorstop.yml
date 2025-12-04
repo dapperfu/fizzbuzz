@@ -1,0 +1,29 @@
+project: FizzBuzz
+root: reqs
+edit: reqs
+review: reqs
+publish: docs/doorstop
+levels:
+  - REQ
+  - SYS
+  - SPC
+  - TST
+defaults:
+  digits: 3
+  format: yaml
+  sep: '-'
+  parent: null
+  reviewed: false
+  derived: false
+  header: null
+  body: null
+  footer: null
+  active: true
+  normative: true
+  custom: {}
+paths:
+  REQ: reqs/REQ
+  SYS: reqs/SYS
+  SPC: reqs/SPC
+  TST: reqs/TST
+

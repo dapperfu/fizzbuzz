@@ -71,7 +71,31 @@ all:
 dev:
 	nano fizzbuzz.py && ./fizzbuzz.py > output.txt && cat output.txt && git add . && read -p "Press Enter to continue..." dummy && git commit -a
 
+# Requirements documentation directories
+DOORSTOP_HTML_DIR = docs/doorstop
+STRICTDOC_HTML_DIR = docs/strictdoc/html
+
+# Doorstop HTML generation
+.PHONY: doorstop-html
+doorstop-html:
+	mkdir -p ${DOORSTOP_HTML_DIR}
+	doorstop publish ${DOORSTOP_HTML_DIR}
+
+# StrictDoc HTML generation
+.PHONY: strictdoc-html
+strictdoc-html:
+	mkdir -p ${STRICTDOC_HTML_DIR}
+	strictdoc export --formats html --output-dir ${STRICTDOC_HTML_DIR} docs/strictdoc
+
+# Generate all requirements documentation
+.PHONY: reqs-html
+reqs-html: doorstop-html strictdoc-html
+	@echo "Requirements documentation generated:"
+	@echo "  Doorstop: ${DOORSTOP_HTML_DIR}"
+	@echo "  StrictDoc: ${STRICTDOC_HTML_DIR}"
+
 # Clean target
 .PHONY: clean
 clean:
 	rm -f ${C_EXE} ${CPP_EXE} ${RUST_EXE} ${GO_EXE}
+	rm -rf ${DOORSTOP_HTML_DIR} ${STRICTDOC_HTML_DIR}

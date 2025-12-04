@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+body: |
+  For numbers divisible by three, the system shall print "Fizz" instead of the number.
+footer: ''
+level: REQ
+normative: true
+parent: null
+ref: REQ-002
+reviewed: false
+text: |
+  For numbers divisible by three, the system shall print "Fizz" instead of the number.
+title: Print Fizz for numbers divisible by three
+

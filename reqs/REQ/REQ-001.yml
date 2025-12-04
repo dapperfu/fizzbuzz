@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: ''
+body: |
+  The system shall print numbers from 1 to 100 sequentially.
+footer: ''
+level: REQ
+normative: true
+parent: null
+ref: REQ-001
+reviewed: false
+text: |
+  The system shall print numbers from 1 to 100 sequentially.
+title: Print numbers from 1 to 100
+
