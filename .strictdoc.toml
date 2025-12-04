@@ -1,7 +1,7 @@
 project_title = "FizzBuzz Requirements"
 project_version = "1.0.0"
-input_paths = ["docs/strictdoc"]
-output_path = "docs/strictdoc/html"
-output_html_root = "docs/strictdoc/html"
-project_config = "docs/strictdoc"
+input_paths = ["docs/strictdoc-source"]
+output_path = "docs/strictdoc-temp"
+output_html_root = "docs/strictdoc-temp"
+project_config = "docs/strictdoc-source"
 

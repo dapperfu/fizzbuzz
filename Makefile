@@ -87,7 +87,7 @@ doorstop-html:
 .PHONY: strictdoc-html
 strictdoc-html:
 	mkdir -p ${STRICTDOC_TEMP_DIR}
-	strictdoc export --formats html --output-dir ${STRICTDOC_TEMP_DIR} docs/strictdoc
+	strictdoc export --formats html --output-dir ${STRICTDOC_TEMP_DIR} docs/strictdoc-source
 	@if [ -d "${STRICTDOC_TEMP_DIR}/html" ]; then \
 		mkdir -p ${STRICTDOC_HTML_DIR}; \
 		rm -rf ${STRICTDOC_HTML_DIR}/*; \

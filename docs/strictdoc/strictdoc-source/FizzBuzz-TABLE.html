@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content="strictdoc, documentation, documentation-tool, requirements-management, requirements, documentation-generator, requirement-specifications, requirements-engineering, technical-documentation, requirements-specification"/>
+  <meta name="description" content="strictdoc. Software for technical documentation and requirements management."/>
+  <meta name="strictdoc-export-type" content="static">
+  <meta name="strictdoc-document-level" content="1">
+
+  <link rel="shortcut icon" href="../_static/favicon.ico" type="image/x-icon"/>
+
+  
+  
+  <link rel="stylesheet" href="../_static/base.css"/>
+  <link rel="stylesheet" href="../_static/layout.css"/>
+  <link rel="stylesheet" href="../_static/content.css"/>
+  <link rel="stylesheet" href="../_static/node.css"/>
+  <link rel="stylesheet" href="../_static/node_content.css"/>
+  <link rel="stylesheet" href="../_static/element.css"/>
+  <link rel="stylesheet" href="../_static/form.css"/>
+  <link rel="stylesheet" href="../_static/requirement__temporary.css"/>
+  <link rel="stylesheet" href="../_static/autogen.css"/>
+  
+  <link rel="stylesheet" href="../_static/table_vew.css"/>
+
+
+  
+  <script src="../_static/viewtype_menu.js"></script>
+  <script src="../_static/resizable_bar.js"></script>
+  <script src="../_static/collapsible_toc.js"></script>
+  <script src="../_static/toc_highlighting.js"></script>
+  
+  
+
+
+  <title>FizzBuzz Requirements - Table</title>
+
+  
+</head>
+
+<body data-viewtype="table" data-turbo="false">
+
+<div class="mars">
+  
+</div>
+
+  <div class="layout" id="layout">
+
+    <nav class="layout_nav">
+      <div class="nav">
+
+
+
+  <a
+    data-link="index"
+    class="nav_button"
+    href="../index.html"
+    title="Project index">
+    <svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <line x1="9" y1="4" x2="7" y2="4"></line>
+  <line x1="12" y1="9" x2="12" y2="7"></line>
+  <line x1="6" y1="10" x2="10" y2="6"></line>
+  <circle cx="4" cy="12" r="2.25"></circle>
+  <circle cx="12" cy="4" r="2.25"></circle>
+  <circle cx="4" cy="4" r="2.25"></circle>
+  <circle cx="12" cy="12" r="2.25"></circle>
+</svg>
+  </a></div>
+    </nav><aside class="layout_tree">
+      
+  
+
+
+
+<div
+  js-resizable_bar="tree"
+  data-state="open"
+  data-position="left"
+>
+<div class="tree">
+    
+        
+          <div
+            class="tree_folder"
+            data-level="0"
+            data-testid="tree-folder-item"
+          >
+          <span class="tree_folder_path">/</span>
+          </div>
+        
+      
+        
+        <a
+          href="../strictdoc-source/FizzBuzz.html"
+          class="tree_item"
+          
+          active="true"
+          
+          data-folder="strictdoc-source"
+          data-testid="tree-document-link"
+        >
+          <svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d=" M13,13 L13,8 C13,7.5 12.6,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L12,14 C12.6,14 13,13.5 13,13 Z M13,9 L13,8 C13,7.5 13,7 12.5,6.5 L8.5,2.5 C8,2 7.5,2 7,2 L6,2"></path>
+</svg>
+          <div
+            class="document_title"
+            title="FizzBuzz Requirements"
+            data-file_name="FizzBuzz.sdoc"
+          >FizzBuzz Requirements</div>
+        </a>
+        
+        
+        
+        
+      </div>
+</div>
+
+    </aside><aside
+        data-position="right"
+        class="layout_toc"
+      >
+        
+  
+
+
+
+<div
+  js-resizable_bar="toc"
+  data-state="open"
+  data-position="right"
+>
+<turbo-frame
+  id="frame-toc"
+  style="display: contents"
+>
+      <ul
+      data-testid="toc-list"
+      js-collapsible_list="list"
+      class="toc"
+      id="toc"
+      data-controller="draggable_list"><li data-nodeid="2aa1fb5f7691438f8b895db2cef62c29">
+        <a
+          href="#REQ-001"
+          anchor="REQ-001"
+          data-turbo="false"
+        >
+          <span class="section-number">
+            1
+          </span>Print numbers from 1 to 100
+            </a></li><li data-nodeid="b4e7dae175dd41a28bf3085e8647197a">
+        <a
+          href="#REQ-002"
+          anchor="REQ-002"
+          data-turbo="false"
+        >
+          <span class="section-number">
+            2
+          </span>Print Fizz for numbers divisible by three
+            </a></li><li data-nodeid="4364b617fe1c41c79eca3d0ddc64e23c">
+        <a
+          href="#REQ-003"
+          anchor="REQ-003"
+          data-turbo="false"
+        >
+          <span class="section-number">
+            3
+          </span>Print Buzz for numbers divisible by five
+            </a></li><li data-nodeid="759537f84c9a4633a725153e6d3e2ecb">
+        <a
+          href="#REQ-004"
+          anchor="REQ-004"
+          data-turbo="false"
+        >
+          <span class="section-number">
+            4
+          </span>Print FizzBuzz for numbers divisible by both three and five
+            </a></li></ul>
+</turbo-frame>
+</div>
+
+      </aside><header class="layout_header">
+      <div class="header">
+
+  
+  <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polyline points="14 5 14 10.5 8 15 2 10.5 2 5 8 1 14 5 8 9.5"></polyline>
+  <polyline points="2.5 5.5 8 9.5 8 15"></polyline>
+</svg>
+  <div
+    class="header__project_name"
+    title="Untitled Project"
+  >Untitled Project
+  </div>
+
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" class="sc-gLvsXj bpkaBy"><path stroke="currentColor" d="M12.5 4.5l-5 11" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <turbo-frame id="header_document_title">
+  <svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d=" M13,13 L13,8 C13,7.5 12.6,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L12,14 C12.6,14 13,13.5 13,13 Z M13,9 L13,8 C13,7.5 13,7 12.5,6.5 L8.5,2.5 C8,2 7.5,2 7,2 L6,2"></path>
+</svg>
+  <div
+    class="header__document_title"
+    title="FizzBuzz Requirements"
+  >
+    FizzBuzz Requirements
+  </div>
+</turbo-frame>
+    
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" class="sc-gLvsXj bpkaBy"><path stroke="currentColor" d="M12.5 4.5l-5 11" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <div class="viewtype">
+  <div
+    id="viewtype_handler"
+    class="viewtype__handler"
+    aria-expanded="false"
+    aria-controls="viewtype_menu"
+  >
+    <span>Table</span>
+    <svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" >
+  <path d="M5 10l3 3 3-3M5 6l3-3 3 3"></path>
+</svg>
+  </div>
+  <menu
+    id="viewtype_menu"
+    class="viewtype__menu"
+    aria-hidden="true"
+    aria-labelledby="viewtype_handler"
+  >
+    <li class="viewtype__menu_header">VIEWS</li>
+    <li>
+      <a
+        data-viewtype_link="document"
+        class="viewtype__menu_item"
+        title="Go to Document view"
+        href="../strictdoc-source/FizzBuzz.html#None-FizzBuzz-Requirements">
+      Document</a>
+    </li><li>
+      <a
+        data-viewtype_link="table"
+        class="viewtype__menu_item"
+        title="Go to Table view"
+        href="../strictdoc-source/FizzBuzz-TABLE.html#None-FizzBuzz-Requirements">
+      Table</a>
+    </li><li>
+      <a
+        data-viewtype_link="traceability"
+        class="viewtype__menu_item"
+        title="Go to Traceability view"
+        href="../strictdoc-source/FizzBuzz-TRACE.html#None-FizzBuzz-Requirements">
+      Traceability</a>
+    </li><li>
+      <a
+        data-viewtype_link="deep_traceability"
+        class="viewtype__menu_item"
+        title="Go to Deep Traceability view"
+        href="../strictdoc-source/FizzBuzz-DEEP-TRACE.html#None-FizzBuzz-Requirements">
+      Deep Traceability</a>
+    </li></menu>
+</div>
+    </div>
+    </header>
+
+    <main class="layout_main">
+      
+  <div class="main">
+    
+<div class="tags">
+</div>
+      <div class="content">
+        <sdoc-node>
+        
+<h1 data-testid="document-title">
+  FizzBuzz Requirements
+  <span style="position: absolute; left: 0;" id="None-FizzBuzz-Requirements" data-uid="None-FizzBuzz-Requirements" data-anchor="None-FizzBuzz-Requirements"></span>
+</h1>
+        
+
+        </sdoc-node>
+        <table class="content-view-table">
+          <thead>
+            <tr>
+              <th class="content-view-th">Type</th>
+              <th class="content-view-th">Level</th><th class="content-view-th">UID</th><th class="content-view-th">PREFIX</th><th class="content-view-th">REFS</th>
+              <th class="content-view-th">Title</th>
+              <th class="content-view-th">Statement</th>
+              <th class="content-view-th">Rationale</th>
+              <th class="content-view-th">Comment</th></tr>
+          </thead>
+              <tr>
+                <td class="content-view-td content-view-td-type">
+                  REQUIREMENT
+                </td>
+                <td class="content-view-td content-view-td-meta">
+                  1
+                </td>
+                  <td class="content-view-td content-view-td-meta">REQ-001</td>
+                  <td class="content-view-td content-view-td-meta"></td><td class="content-view-td content-view-td-meta content-view-td-related">
+                </td>
+                <td class="content-view-td content-view-td-title"><sdoc-anchor
+  id="REQ-001"
+  data-anchor="REQ-001"
+  node-role="requirement"
+  data-uid="REQ-001"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-001</span>
+</div>
+    </div></sdoc-anchor>
+                    <div class="requirement__title">Print numbers from 1 to 100</div></td>
+                <td class="content-view-td content-view-td-content"><sdoc-autogen><div class="document">
+<p>The system shall print numbers from 1 to 100 sequentially.</p>
+</div>
+</sdoc-autogen></td>
+                <td class="content-view-td content-view-td-content"></td>
+                <td class="content-view-td content-view-td-content"></td></tr>
+              <tr>
+                <td class="content-view-td content-view-td-type">
+                  REQUIREMENT
+                </td>
+                <td class="content-view-td content-view-td-meta">
+                  2
+                </td>
+                  <td class="content-view-td content-view-td-meta">REQ-002</td>
+                  <td class="content-view-td content-view-td-meta"></td><td class="content-view-td content-view-td-meta content-view-td-related">
+                </td>
+                <td class="content-view-td content-view-td-title"><sdoc-anchor
+  id="REQ-002"
+  data-anchor="REQ-002"
+  node-role="requirement"
+  data-uid="REQ-002"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-002</span>
+</div>
+    </div></sdoc-anchor>
+                    <div class="requirement__title">Print Fizz for numbers divisible by three</div></td>
+                <td class="content-view-td content-view-td-content"><sdoc-autogen><div class="document">
+<p>For numbers divisible by three, the system shall print &quot;Fizz&quot; instead of the number.</p>
+</div>
+</sdoc-autogen></td>
+                <td class="content-view-td content-view-td-content"></td>
+                <td class="content-view-td content-view-td-content"></td></tr>
+              <tr>
+                <td class="content-view-td content-view-td-type">
+                  REQUIREMENT
+                </td>
+                <td class="content-view-td content-view-td-meta">
+                  3
+                </td>
+                  <td class="content-view-td content-view-td-meta">REQ-003</td>
+                  <td class="content-view-td content-view-td-meta"></td><td class="content-view-td content-view-td-meta content-view-td-related">
+                </td>
+                <td class="content-view-td content-view-td-title"><sdoc-anchor
+  id="REQ-003"
+  data-anchor="REQ-003"
+  node-role="requirement"
+  data-uid="REQ-003"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-003</span>
+</div>
+    </div></sdoc-anchor>
+                    <div class="requirement__title">Print Buzz for numbers divisible by five</div></td>
+                <td class="content-view-td content-view-td-content"><sdoc-autogen><div class="document">
+<p>For numbers divisible by five, the system shall print &quot;Buzz&quot; instead of the number.</p>
+</div>
+</sdoc-autogen></td>
+                <td class="content-view-td content-view-td-content"></td>
+                <td class="content-view-td content-view-td-content"></td></tr>
+              <tr>
+                <td class="content-view-td content-view-td-type">
+                  REQUIREMENT
+                </td>
+                <td class="content-view-td content-view-td-meta">
+                  4
+                </td>
+                  <td class="content-view-td content-view-td-meta">REQ-004</td>
+                  <td class="content-view-td content-view-td-meta"></td><td class="content-view-td content-view-td-meta content-view-td-related">
+                </td>
+                <td class="content-view-td content-view-td-title"><sdoc-anchor
+  id="REQ-004"
+  data-anchor="REQ-004"
+  node-role="requirement"
+  data-uid="REQ-004"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-004</span>
+</div>
+    </div></sdoc-anchor>
+                    <div class="requirement__title">Print FizzBuzz for numbers divisible by both three and five</div></td>
+                <td class="content-view-td content-view-td-content"><sdoc-autogen><div class="document">
+<p>For numbers divisible by both three and five, the system shall print &quot;FizzBuzz&quot; instead of the number.</p>
+</div>
+</sdoc-autogen></td>
+                <td class="content-view-td content-view-td-content"></td>
+                <td class="content-view-td content-view-td-content"></td></tr>
+        </table>
+      </div>
+      
+  </div>
+  
+
+    </main>
+
+    <footer class="layout_footer">
+      <div class="footer">
+        Built with
+        <a
+          class="strictdoc__link"
+          href="https://github.com/strictdoc-project/strictdoc"
+          target="_blank"
+        >StrictDoc</a>
+        <a
+          class="strictdoc__version"
+          href="https://github.com/strictdoc-project/strictdoc/releases/tag/0.15.2"
+          target="_blank"
+        >
+          <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" >
+            <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/>
+          </svg>
+          0.15.2
+        </a>
+      </div>
+    </footer>
+
+    <aside class="layout_aside">
+      
+    </aside>
+
+  </div>
+  
+  <div id="modal"></div>
+  <div id="confirm"></div>
+  
+
+</body>
+</html>
